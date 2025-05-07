@@ -31,6 +31,51 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Automatic Deployment
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com):
+
+1. Create a Vercel account at [vercel.com](https://vercel.com)
+2. Install the Vercel CLI:
+   ```bash
+   npm i -g vercel
+   ```
+3. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+4. Deploy the application:
+   ```bash
+   vercel
+   ```
+5. For production deployment:
+   ```bash
+   vercel --prod
+   ```
+
+### GitHub Integration
+
+For automatic deployments with GitHub:
+
+1. Connect your GitHub repository to Vercel
+2. Configure the following environment variables in Vercel:
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+   - `CLERK_SECRET_KEY`
+   - `NEXT_PUBLIC_CLERK_SIGN_IN_URL`
+   - `NEXT_PUBLIC_CLERK_SIGN_UP_URL`
+   - `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL`
+   - `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL`
+   - `NEXT_PUBLIC_BACKEND_URL`
+
+### GitHub Actions Deployment
+
+If using GitHub Actions for deployment:
+
+1. Add the following secrets to your GitHub repository:
+   - `VERCEL_TOKEN`: Your Vercel API token
+   - `VERCEL_ORG_ID`: Your Vercel organization ID
+   - `VERCEL_PROJECT_ID`: Your Vercel project ID
+
+The CI/CD workflow will automatically deploy your application on pushes to the main branch.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

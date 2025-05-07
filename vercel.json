@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --no-optional",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "regions": ["fra1"],
+  "env": {
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pktest_clerk_key",
+    "CLERK_SECRET_KEY": "secret",
+    "NEXT_PUBLIC_CLERK_SIGN_IN_URL": "/sign-in",
+    "NEXT_PUBLIC_CLERK_SIGN_UP_URL": "/sign-up",
+    "NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL": "/",
+    "NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL": "/",
+    "NEXT_PUBLIC_BACKEND_URL": "https://localsgo-backend.up.railway.app"
+  }
+} 
