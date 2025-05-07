@@ -48,5 +48,3 @@ export function categoryIcon(type: string): React.ReactNode {
   return icons[typeLower as keyof typeof icons] || icons.default;
 }
 
-// We're moving tripTypes to its own file
-
